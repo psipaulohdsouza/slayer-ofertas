@@ -4,7 +4,7 @@
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf2ff;background:#091321}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(120deg,#142d48,#0c1829);padding:26px max(20px,calc((100% - 1100px)/2));border-bottom:1px solid #25435b}.brand{font-size:27px;font-weight:900;letter-spacing:.5px}.brand span{color:#61e3a5}.sub{color:#b7cadb;margin:7px 0 0}main{max-width:1100px;margin:auto;padding:30px 20px}h1{font-size:clamp(25px,5vw,38px);margin:0 0 8px}p{line-height:1.55}.intro{color:#bbcbda}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}input{flex:1;min-width:200px;background:#17273a;border:1px solid #38536c;color:white;border-radius:12px;padding:14px;font:inherit}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid #3b556a;background:#17283a;color:#eaf2ff;border-radius:99px;padding:11px 14px;cursor:pointer}.chip[aria-pressed=true]{background:#49d99a;color:#08251a;border-color:#49d99a;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px}.card{background:#132338;border:1px solid #28435c;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.visual{height:150px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#234564,#15293e)}.content{padding:18px;flex:1;display:flex;flex-direction:column}.tag{font-size:12px;color:#65e0ad;text-transform:uppercase;letter-spacing:.6px;font-weight:700}.card h2{font-size:19px;margin:9px 0}.card p{font-size:14px;color:#b9cad8;flex:1}.buy{display:block;background:#52dca1;color:#06261a;text-decoration:none;text-align:center;padding:12px;border-radius:10px;font-weight:800}.buy.disabled{background:#344b5d;color:#c6d2dc;cursor:not-allowed}footer{border-top:1px solid #294055;color:#adbdca;padding:24px 20px;text-align:center;font-size:13px}#empty{display:none;color:#b9cad8;padding:20px}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #a3f7d2;outline-offset:3px}
 </style></head><body>
 <header><div class="brand">SLAYER <span>OFERTAS</span></div><p class="sub">Achadinhos para jogar, treinar e facilitar o dia a dia.</p></header>
-<main><h1>Encontre seu próximo achado</h1><p class="intro">Explore nossas categorias. As recomendações serão adicionadas com links oficiais de afiliado do Mercado Livre.</p>
+<main><h1>Encontre seu próximo achado</h1><p class="intro">Confira os 18 links enviados. As informações dos produtos serão detalhadas após confirmação dos anúncios.</p>
 <div class="controls"><input id="search" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"><div class="chips" id="filters" aria-label="Filtrar por categoria"></div></div>
 <section class="grid" id="products" aria-label="Produtos"></section><p id="empty">Nenhum produto encontrado.</p>
 </main><footer><p><strong>Transparência:</strong> esta página poderá conter links de afiliado. Podemos receber comissão por compras elegíveis, sem custo adicional para você.</p><p>Slayer Ofertas · Vitrine independente. As compras são realizadas no site do vendedor.</p></footer>
@@ -13,16 +13,150 @@
 // Para ativar um produto, substitua o campo link pelo URL de afiliado oficial.
 // Não inclua preços fixos sem processo de atualização.
 const products=[
-{id:1,name:"Headsets gamer",category:"Games",icon:"🎧",description:"Modelos para comparar conforto, microfone e compatibilidade.",link:""},
-{id:2,name:"Teclados e mouses",category:"Games",icon:"⌨️",description:"Acessórios para diferentes estilos de jogo e setup.",link:""},
-{id:3,name:"Controles para jogos",category:"Games",icon:"🎮",description:"Confira a compatibilidade com seu PC ou console.",link:""},
-{id:4,name:"Bolas de basquete",category:"Esportes",icon:"🏀",description:"Compare tamanho, material e tipo de quadra.",link:""},
-{id:5,name:"Acessórios de treino",category:"Esportes",icon:"🏋️",description:"Itens para exercícios em casa e na academia.",link:""},
-{id:6,name:"Tênis esportivos",category:"Esportes",icon:"👟",description:"Escolha conforme a modalidade e o ajuste.",link:""},
-{id:7,name:"Suportes para celular",category:"Tecnologia",icon:"📱",description:"Praticidade para mesa, carro e rotina.",link:""},
-{id:8,name:"Acessórios para computador",category:"Tecnologia",icon:"💻",description:"Organize e melhore seu espaço de trabalho.",link:""},
-{id:9,name:"Organizadores domésticos",category:"Casa",icon:"🏠",description:"Soluções práticas para organização.",link:""},
-{id:10,name:"Iluminação para ambientes",category:"Casa",icon:"💡",description:"Opções para quarto, escritório e casa.",link:""}
+  {
+    "id": 1,
+    "name": "Produto 01",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/29WWj8K"
+  },
+  {
+    "id": 2,
+    "name": "Produto 02",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1JhD8t4"
+  },
+  {
+    "id": 3,
+    "name": "Produto 03",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/2CBWjkW"
+  },
+  {
+    "id": 4,
+    "name": "Produto 04",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/14XuQ7X"
+  },
+  {
+    "id": 5,
+    "name": "Produto 05",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/2hqfbnA"
+  },
+  {
+    "id": 6,
+    "name": "Produto 06",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/17Pqd6q"
+  },
+  {
+    "id": 7,
+    "name": "Produto 07",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/128m4zt"
+  },
+  {
+    "id": 8,
+    "name": "Produto 08",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1NGdoee"
+  },
+  {
+    "id": 9,
+    "name": "Produto 09",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/24yoviK"
+  },
+  {
+    "id": 10,
+    "name": "Produto 10",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1SkfNkR"
+  },
+  {
+    "id": 11,
+    "name": "Produto 11",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1UJA8ja"
+  },
+  {
+    "id": 12,
+    "name": "Produto 12",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1WQJgKT"
+  },
+  {
+    "id": 13,
+    "name": "Produto 13",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/2GnTztN"
+  },
+  {
+    "id": 14,
+    "name": "Produto 14",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/258MJzh"
+  },
+  {
+    "id": 15,
+    "name": "Produto 15",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1i6VqUX"
+  },
+  {
+    "id": 16,
+    "name": "Produto 16",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/27ZAUKg"
+  },
+  {
+    "id": 17,
+    "name": "Produto 17",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/31c9pu3"
+  },
+  {
+    "id": 18,
+    "name": "Produto 18",
+    "category": "Links recebidos",
+    "icon": "🛍️",
+    "description": "Produto do Mercado Livre. Nome, categoria e preço aguardam conferência.",
+    "link": "https://meli.la/1DRmAnv"
+  }
 ];
 let selected="Todos";
 const grid=document.querySelector("#products"),filters=document.querySelector("#filters"),search=document.querySelector("#search");
